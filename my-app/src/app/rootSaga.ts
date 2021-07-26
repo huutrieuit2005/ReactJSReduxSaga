@@ -1,12 +1,11 @@
-import counterSaga from "features/counterSaga";
-import {all} from "redux-saga/effects";
+import counterSaga from 'features/counterSaga';
+import { all } from 'redux-saga/effects';
 
-function* heloSaga(){
-    console.log("hello saga");
-    
+function* heloSaga() {
+  console.log('hello saga');
 }
 
 export default function* rootSaga() {
   console.log('rootSaga log');
-  yield all([heloSaga(), counterSaga()],);
+  yield all([heloSaga(), counterSaga()]);
 }
